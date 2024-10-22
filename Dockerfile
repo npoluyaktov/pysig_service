@@ -1,7 +1,7 @@
 FROM ubuntu:23.10
 ARG SIG_PIN
 ENV SIG_PIN=$SIG_PIN
-ARG CONT='\\.\HDIMAGE\ca9e858e6-4a61-c61a-159e-e750ff4c00b'
+ARG CONT='ca9e858e6-4a61-c61a-159e-e750ff4c00b'
 WORKDIR /app
 COPY . .
 RUN apt update &&\
