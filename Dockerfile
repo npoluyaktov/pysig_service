@@ -14,7 +14,7 @@ RUN ./install.sh &&\
 RUN cp -r /app/ca9e858e.000 /var/opt/cprocsp/keys/root &&\
     /opt/cprocsp/bin/amd64/csptest -keyset -enum_cont -fqcn -verifycontext &&\
     /opt/cprocsp/bin/amd64/certmgr -inst -store mroot -file /app/certnew.cer &&\
-    /opt/cprocsp/bin/amd64/certmgr -inst -store mMy -file test.cer -cont '\\.\HDIMAGE\ca9e858e6-4a61-c61a-159e-e750ff4c00b' -pin 1234567890
+    /opt/cprocsp/bin/amd64/certmgr -inst -store mMy -file /app/test.cer -cont '\\.\HDIMAGE\ca9e858e6-4a61-c61a-159e-e750ff4c00b' -pin 1234567890
 WORKDIR /app
 RUN git clone https://github.com/CryptoPro/pycades.git
 WORKDIR pycades
