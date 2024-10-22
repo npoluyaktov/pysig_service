@@ -16,7 +16,7 @@ SIG_PIN = os.environ['SIG_PIN']
 
 def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
     correct_username = secrets.compare_digest(credentials.username, "user")
-    correct_password = secrets.compare_digest(credentials.password, "MRo)(up6|NzmIe%0")
+    correct_password = secrets.compare_digest(credentials.password, "somepwd")
     if not (correct_username and correct_password):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
