@@ -13,7 +13,7 @@ RUN ./install.sh &&\
     apt install ./cprocsp-pki-cades*.deb
 RUN cp -r /app/ca9e858e.000 /var/opt/cprocsp/keys/root &&\
     /opt/cprocsp/bin/amd64/csptest -keyset -enum_cont -fqcn -verifycontext &&\
-    /opt/cprocsp/bin/amd64/certmgr -inst -store mroot -file /app/certnew.cer &&\
+    /opt/cprocsp/bin/amd64/certmgr -inst -store mroot -file /app/certnew.cer
 WORKDIR /app
 RUN git clone https://github.com/CryptoPro/pycades.git
 WORKDIR pycades
