@@ -11,7 +11,7 @@ WORKDIR linux-amd64_deb
 RUN ./install.sh &&\
     apt install ./lsb-cprocsp-devel_5.0*.deb &&\
     apt install ./cprocsp-pki-cades*.deb
-RUN cp -r /app/ca9e858e.000 /var/opt/cprocsp/keys/root &&\
+RUN cp -r /app/test.000 /var/opt/cprocsp/keys/root &&\
     /opt/cprocsp/bin/amd64/csptest -keyset -enum_cont -fqcn -verifycontext &&\
     /opt/cprocsp/bin/amd64/certmgr -inst -store mroot -file /app/certnew.cer
 WORKDIR /app
