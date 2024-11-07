@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "1adcdd9e-acd7-4dfd-9191-5e93546a06cb",
+		"name": "pysig_service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1366007"
+	},
+	"item": [
+		{
+			"name": "sign xml",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "somepwd",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"<![CDATA[<message><id>cdaf007e-5536-486a-948b-6b09a18ddeba</id></message>]]>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{pysig_host}}/sign_xml",
+					"protocol": "http",
+					"host": [
+						"{{pysig_host}}"
+					],
+					"path": [
+						"sign_xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cont count",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "somepwd",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pysig_host}}/list",
+					"protocol": "http",
+					"host": [
+						"{{pysig_host}}"
+					],
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign string",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "somepwd",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"testtest222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{pysig_host}}/sign_string",
+					"protocol": "http",
+					"host": [
+						"{{pysig_host}}"
+					],
+					"path": [
+						"sign_string"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
